@@ -1,0 +1,29 @@
+m = int(input("enter number to be gussed\n \t ==>"))
+c = 10
+while(True):
+    if m>100:
+        print("entre two digit number")
+        m = int(input("enter number to be gussed\n \t ==>"))
+    else:
+        while(True):
+            print("you have", c, "chances")
+            if c==10:
+                i = int(input("\nstart gusseing the number \n ==>"))
+            else:
+                i = int(input())
+            if i>m:
+                print("\ntry to enter a smaller number")
+                c = c -1
+            elif i<m:
+                print("\ntry to enter greater no.")
+                c = c-1
+            else:
+                 print("\t congrats!!!\tcongrats!!!")
+                 print("you won in",c,"chances")
+                 break
+            if c<1:
+                print("you lose try again later")
+                print("thank \t for \t playing")
+                break
+
+
